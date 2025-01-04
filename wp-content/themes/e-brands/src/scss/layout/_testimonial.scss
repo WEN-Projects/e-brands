@@ -1,0 +1,121 @@
+.testimonial-row {
+    .testimonial-slider {
+        .swiper-navigation {
+            @include breakpoint(wide) {
+                display: none;
+            }
+        }
+    }
+}
+
+.testimonial-item {
+    &__wrap {
+        @include flex(false, flex-start, wrap, column);
+        gap: 26px;
+        @include breakpoint(small) {
+            gap: 20px;
+        }
+        &.content-center {
+            @include flex(center, center, wrap, column);
+            text-align: center;
+        }
+        &.padded {
+            @include breakpoint(wide, true) {
+                padding-inline: 21%;
+            }
+        }
+    }
+    &__title {
+        line-height: 1.4;
+        margin-bottom: 0;
+    }
+
+    &__author-wrapper {
+        padding-block-start: 6px;
+        text-align: left;
+        @include breakpoint(small) {
+            text-align: center;
+        }
+        &.v-aligned {
+            @include flex(false, flex-start, wrap, column);
+            gap: 16px;
+            .author-row {
+                @include flex(false, flex-start, wrap, column);
+                gap: 16px;
+                text-align: left;
+            }
+        }
+        &.inline {
+            @include flex(false, flex-start, wrap, row);
+            > div {
+                padding: 0 20px;
+                &:not(:last-child) {
+                    border-right: 1px solid $color__primary;
+                }
+                &:first-child {
+                    padding-inline-start: 0;
+                }
+                &:last-child {
+                    padding-inline-end: 0;
+                }
+            }
+        }
+        .author-row {
+            margin-block-start: 0;
+            @include breakpoint(small) {
+                flex-direction: column;
+                gap: 18px;
+            }
+            .img-wrap {
+                width: 56px;
+                height: 56px;
+                @include breakpoint(small) {
+                    margin-inline-end: 0;
+                }
+            }
+            .author-text {
+                h5, .post-meta {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.review-list {
+    .review-list-wrap {
+        padding-block-start: 53px;
+        @include flex(center, flex-start, wrap);
+        gap: 32px;
+        @include breakpoint(medium) {
+            gap: 15px;
+        }
+        @include breakpoint(small) {
+            gap: 40px;
+            flex-direction: column;
+            align-items: stretch;
+            padding-block-start: 25px;
+
+        }
+        .testimonial-item {
+            &__wrap {
+                @include flex-grid-width(3, 32px);
+                gap: 29px;
+                @include breakpoint(medium) {
+                    @include flex-grid-width(3, 15px);
+                }
+                @include breakpoint(small) {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    gap: 24px;
+                }
+            }
+            &__title {
+                font-size: 20px;
+                @include breakpoint(small) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

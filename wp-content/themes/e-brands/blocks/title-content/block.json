@@ -1,0 +1,17 @@
+{
+  "name": "title-content",
+  "title": "Title Content",
+  "description": "Title Content",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Title Content"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "title-content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

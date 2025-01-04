@@ -1,0 +1,129 @@
+.contact-sec {
+    &__title-wrap {
+        @include flex(space-between, flex-start, wrap, row);
+        gap: 0 80px;
+        @include breakpoint(medium) {
+            gap: 40px;
+        }
+        @include breakpoint(small) {
+            gap: 27px;
+            flex-direction: column;
+        }
+    }
+    &__title-col {
+        flex: 0 0 calc(59% - 40px);
+    }
+    &__info-col {
+        padding-block-start: 9px;
+        flex: 0 0 calc(41% - 40px);
+        @include flex(false, false, wrap, column);
+        gap: 23px 0;
+        @include breakpoint(small) {
+            gap: 26px 0;
+        }
+        .item {
+            @include flex(false, flex-start, wrap, row);
+            .icon {
+                width: 24px;
+                margin-right: 16px;
+            }
+            .item-text-wrapper {
+                flex: 1;
+                font-size: 16px;
+                h6 {
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+    &__map-wrap {
+        padding-top: 80px;
+        @include breakpoint(small) {
+            padding-top: 55px;
+        }
+        iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: 738px;
+            @include breakpoint(wide) {
+                height: 400px;
+            }
+        }
+    }
+}
+
+//Contact Page with form
+
+.contact-form-sec {
+    &__title-row {
+        text-align: center;
+    }
+    .form-wrap {
+        padding-block-start: 56px;
+        max-width: 560px;
+        margin: 0 auto;
+        @include breakpoint(wide){
+            padding-block-start: 11px;
+        }
+        form {
+            textarea,
+            input {
+                width: 100%;
+            }
+            input:not(input[type="checkbox"]) {
+                margin-block-end: 24px;
+                padding: 15px 13px !important;
+            }
+            input[type="radio"],
+            input[type="checkbox"],
+            input[type="submit"] {
+                width: auto;
+            }
+            textarea {
+                height: 182px;
+                margin-block-end: 16px;
+                padding-block-start: 16px;
+            }
+            label{
+                display: inline-block;
+                margin-bottom: 6px;
+            }
+            .wpcf7-acceptance{
+                padding-inline-start: 0;
+                margin-block-end: 30px;
+                display: block;
+                max-width: 438px;
+                margin: 0 auto 30px;
+                @include breakpoint(wide){
+                    padding-inline-start: 0;
+                    margin-block-end: 20px;
+                    max-width: 100%;
+                }
+                .wpcf7-list-item{
+                    margin-inline: 0;
+                    span{
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        p {
+            margin: 0;
+        }
+
+        input[type="submit"]{
+            margin: 0 auto 0 !important;
+            display: inherit;
+            min-width: 95px;
+            border: none;
+            background: $color__alternet;
+            color: $color__text_alternet;
+        }
+        .wpcf7-spinner {
+            left: calc(50% + 50px);
+            transform: translate(0, -35px);
+        }
+    }
+}

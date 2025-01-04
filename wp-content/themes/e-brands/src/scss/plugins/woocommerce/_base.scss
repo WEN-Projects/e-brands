@@ -1,0 +1,203 @@
+// Form Elements
+.woocommerce {
+    ul.order_details {
+        padding: 0;
+        @include breakpoint(smaller) {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+                border: none
+            }
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    }
+    form {
+
+    }
+    .woocommerce-table {
+        &--order-details {
+
+        }
+
+        &__line-item {
+            &.order_item {
+
+            }
+        }
+        &__product-name {
+            .wc-item-meta {
+                font-size: 14px;
+                padding: 0;
+            }
+        }
+    }
+    table {
+        &.shop_table {
+            tfoot {
+                td {
+                    @include breakpoint(smaller) {
+                        &:last-child {
+                            width: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-container--default .select2-selection--single {
+    border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+    line-height: 1.3;
+    color: $color__primary;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 9px;
+    b {
+        border-block-color: $color__primary !important;
+    }
+}
+
+// Buttons
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button,
+.woocommerce button:not(.menu-toggle),
+.woocommerce input[type="submit"],
+.woocommerce input[type="button"],
+.woocommerce input[type="reset"],
+.woocommerce .button {
+    padding: 12px 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color__primary;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: normal;
+    background-color: transparent;
+    color: $color__primary;
+    &.full {
+        width: 100%;
+        display: block;
+    }
+    &:disabled[disabled]{
+        padding: 12px 25px;
+    }
+}
+
+.ajax_add_to_cart.added {
+    margin-inline-end: 15px !important;
+}
+
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+    background-color: $color__alternet;
+    color: $color__text_alternet;
+}
+
+.pswp {
+    button,
+    button.pswp__button,
+    button:not(.is-link) {
+        &:hover {
+            background-color: transparent !important
+        }
+    }
+}
+
+//Price
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) ul.products li.product .price {
+    color: $color__primary;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+// Tables
+.woocommerce table {
+
+}
+
+//change color of the rating stars
+.star-rating {
+    color: $color__alternet;
+}
+
+//Styles for the breadcrumbs
+.woocommerce-breadcrumb {
+    color: $color__primary !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    margin-block-end: 24px !important;
+    a {
+        color: $color__primary !important;
+        text-decoration: none;
+        font-weight: 400;
+        margin-inline-end: 8px;
+        margin-inline-start: 10px;
+        &:first-of-type {
+            margin-inline-start: 0;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.woocommerce-form-login {
+    label {
+        input[type=checkbox] {
+            top: 6px;
+        }
+    }
+}
+
+.wc-block-components-form .wc-block-components-text-input input[type=email], .wc-block-components-form .wc-block-components-text-input input[type=number], .wc-block-components-form .wc-block-components-text-input input[type=tel], .wc-block-components-form .wc-block-components-text-input input[type=text], .wc-block-components-form .wc-block-components-text-input input[type=url],
+.wc-block-components-text-input input[type=email],
+.wc-block-components-text-input input[type=number],
+.wc-block-components-text-input input[type=tel],
+.wc-block-components-text-input input[type=text],
+.wc-block-components-text-input input[type=url] {
+    border-radius: 0 !important;
+}
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) {
+    ul.products {
+        li.product {
+            .price {
+                small {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.woocommerce span.onsale,
+.onsale{
+    top: 0;
+    right: 0;
+    left: auto;
+    min-height: 3.236em;
+    min-width: 3.236em;
+    padding: 0.202em;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    line-height: 3.236;
+    border-radius: 100%;
+    background-color: $color__alternet;
+    color: $color__white;
+    font-size: .857em;
+    z-index: 9;
+    margin: 0 !important;
+}

@@ -1,0 +1,122 @@
+.event-list {
+    &__item {
+        @include flex(flex-start, center, wrap, row);
+        gap: 32px;
+        border-top: 1px solid $color__alternet;
+        padding-block: 31px;
+        @include breakpoint(smaller) {
+            flex-direction: column;
+            gap: 16px;
+            padding-block: 24px;
+        }
+        &__date-col {
+            @include flex(center, center, wrap, column);
+            flex: 0 0 112px;
+            max-width: 112px;
+            border: 1px solid $color__primary;
+            padding: 12px 4px;
+            text-align: center;
+            @include breakpoint(smaller) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+            span {
+                display: block;
+            }
+            .weekday {
+                font-size: 16px;
+            }
+            .monthday {
+                font-size: 32px;
+                color: $color__alternet;
+                font-weight: bold;
+                line-height: 1.3;
+                @include breakpoint(small) {
+                    font-size: 24px;
+                }
+            }
+            .yeardate {
+                font-size: 16px;
+            }
+        }
+
+        &__detail-col {
+            flex: 1;
+            @include breakpoint(small) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+            h3 {
+                font-size: 24px;
+                margin-block-end: 0;
+                @include breakpoint(small) {
+                    margin-block-end: 8px;
+                    font-size: 20px;
+                }
+            }
+            .location {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 16px;
+                margin-block-start: 16px;
+                margin-block-end: 0;
+            }
+        }
+        &__button-col {
+            @include breakpoint(small) {
+                width: 100%;
+            }
+            .btn {
+                display: inline-block;
+                padding: 8px 22px;
+                @include breakpoint(small) {
+                    padding: 7px 22px;
+                }
+                @include breakpoint(smaller) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.cat-list {
+    padding: 0 0 46px;
+    margin: 0;
+    @include flex(flex-start, center, wrap, row);
+    gap: 15px;
+    li {
+        list-style-type: none;
+        a {
+            display: inline-block;
+            &.is-secondary {
+                padding: 7px 19px;
+            }
+            &.is-link {
+                padding-inline: 9px;
+                @include breakpoint(wide){
+                    padding-inline-start: 0;
+                }
+                &:hover{
+                    color: $color__alternet;
+                }
+            }
+        }
+        &:first-child{
+            .btn:not(.is-secondary) {
+                padding-inline-start: 0;
+            }
+        }
+        &.current {
+            & + li {
+                .btn {
+                    padding-inline-start: 0;
+                }
+            }
+        }
+    }
+}

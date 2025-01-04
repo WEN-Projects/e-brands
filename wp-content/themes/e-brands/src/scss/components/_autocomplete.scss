@@ -1,0 +1,52 @@
+.autocomplete {
+    position: relative;
+}
+
+.autocomplete #search-results,
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid $color__gray_main;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow: auto;
+    border-bottom: 1px solid $color__gray_main;
+}
+.autocomplete #search-results li.results-not-found,
+.autocomplete #search-results.search-loading{
+    padding: 10px;
+    border-bottom: 1px solid $color__gray_main;
+    background-color: $color__white;
+}
+
+.autocomplete #search-results li{
+    list-style-type: none;
+}
+.autocomplete #search-results li a,
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: $color__white;
+    border-bottom: 1px solid $color__gray_main;
+    text-decoration: none;
+    display: block;
+}
+
+/*when hovering an item:*/
+.autocomplete #search-results li a:hover,
+.autocomplete-items div:hover {
+    background-color: $color__gray_light;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: $color__alternet !important;
+    color: $color__white;
+}

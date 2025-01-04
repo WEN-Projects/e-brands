@@ -1,0 +1,39 @@
+/*********************
+	Background Image
+*********************/
+@mixin background-image(
+	$name,
+	$extention,
+	$repeat: no-repeat,
+	$position: 0 0,
+	$size: 100% 100%
+) {
+	background: url("../images/#{$name}.#{$extention}") #{$repeat} #{$position} /
+		#{$size};
+}
+
+/*********************
+	Center Block
+*********************/
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*********************
+	Fade InOut
+*********************/
+@mixin fade($state, $duration: 0.4s) {
+	@if $state ==show {
+		opacity: 1;
+		visibility: visible;
+	} @else if $state ==hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	transition:
+		#{$duration} opacity,
+		#{$duration} visibility;
+}

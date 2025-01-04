@@ -1,0 +1,60 @@
+.content__accordion{
+    padding-block-start: 80px;
+    @include breakpoint(wide){
+        padding-block-start: 46px;
+    }
+}
+.content__accordion_item {
+    border-bottom: 1px solid $color__primary;
+    &:first-child{
+        border-top: 1px solid $color__primary;
+    }
+    .content__accordion_head {
+        padding: 25px 40px 25px 0;
+        position: relative;
+        cursor: pointer;
+        @include breakpoint(small){
+            padding: 23px 40px 22px 0;
+        }
+        .content__accordion_title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            @include breakpoint(small){
+                font-size: 16px;
+            }
+        }
+        .content__accordion_icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 100%;
+            background: url('../images/arrow-down.svg') no-repeat center;
+            transition: all 0.4s;
+        }
+    }
+    &.opened {
+        .content__accordion_icon {
+            transform: scale(-1);
+        }
+    }
+}
+
+.content__accordion_body {
+    height: 0;
+    overflow: hidden;
+    transition: height .8s;
+}
+
+.content__accordion_body_inner {
+    padding: 0 0 20px;
+}
+
+.content__accordion_body_inner > * {
+    margin: 0 0 15px;
+}
+
+.content__accordion_body_inner > *:last-child {
+    margin: 0;
+}

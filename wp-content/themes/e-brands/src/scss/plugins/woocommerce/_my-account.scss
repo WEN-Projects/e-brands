@@ -1,0 +1,45 @@
+// My Account Page
+.woocommerce-account {
+
+    // Custom styles for my account dashboard
+    .woocommerce-MyAccount-content {
+
+    }
+
+    // Custom styles for my account navigation
+    .woocommerce-MyAccount-navigation {
+        ul {
+            padding-inline-start: 0;
+            li {
+                list-style-type: none;
+                border-bottom: 1px solid $color__primary;
+                background-color: $color__gray_light;
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    text-decoration: none;
+                    padding: 10px 15px;
+                    display: block;
+                }
+                &.is-active {
+                    a {
+                        font-weight: 600;
+                        color: $color__alternet;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce-address-fields__field-wrapper{
+    margin-block-end: 40px;
+}
+
+.lost_reset_password,
+#customer_login{
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+}

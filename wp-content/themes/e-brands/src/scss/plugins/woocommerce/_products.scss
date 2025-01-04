@@ -1,0 +1,127 @@
+// Shop Page
+.post-type-archive-product {
+
+    // Custom styles for product listings
+    .products {
+
+    }
+
+    // Custom styles for individual products
+    .product {
+
+    }
+
+    // Custom styles for product titles
+    .product-title {
+
+    }
+
+    // Custom styles for product prices
+    .price {
+
+    }
+
+    // Custom styles for add to cart button
+    .add_to_cart_button {
+
+    }
+}
+
+.product-list {
+    padding-block-end: calc(112px - 72px);
+    @include breakpoint(wide) {
+        padding-block-end: calc(112px - 92px);
+    }
+    &__title-row {
+        text-align: center;
+        padding-block-end: 57px;
+        @include breakpoint(wide) {
+            padding-block-end: 30px;
+        }
+        &__secondary {
+            text-align: left;
+            padding-block-end: 55px;
+            padding-block-start: 135px;
+            @include breakpoint(wide) {
+                padding-block-start: 80px;
+            }
+            @include breakpoint(medium) {
+                padding-block-start: 40px;
+            }
+            h2 {
+                margin-block-end: 16px;
+            }
+        }
+    }
+    &__filter-row {
+        padding-block-end: 32px;
+    }
+    .product-filter {
+        @include flex(center, flex-end, wrap);
+        gap: 32px;
+        @include breakpoint(medium) {
+            gap: 15px;
+        }
+        .col {
+            @include flex-grid-width(3, 32px);
+            @include breakpoint(medium) {
+                @include flex-grid-width(3, 15px);
+            }
+            @include breakpoint(small) {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            label {
+                @include flex(space-between, flex-end, false);
+                font-size: 16px;
+                margin-block-end: 6px;
+                .clear {
+                    cursor: pointer;
+                    min-width: 50px;
+                    text-align: right;
+                    &:hover {
+                        color: $color__alternet;
+                    }
+                }
+            }
+            input, select {
+                width: 100%;
+                padding: 15px 13px !important;
+                font-size: 16px;
+                color: $color__text_alternet_light;
+                border: 1px solid $color__primary;
+                &::placeholder {
+                    color: $color__text_alternet_light;
+                }
+                &[type=search]{
+                    padding-inline-start: 48px !important;
+                }
+            }
+        }
+    }
+    &__product-result {
+        padding-block-end: 88px;
+        @include breakpoint(wide) {
+            padding-block-end: 50px;
+        }
+        &__container {
+
+        }
+        &__info {
+            font-size: 14px;
+        }
+    }
+    #ebrands-shop-product-list {
+        ul {
+            li {
+                .woocommerce-loop-product__title{
+                    padding-block-start: 0;
+                    padding-block-end: 5px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+

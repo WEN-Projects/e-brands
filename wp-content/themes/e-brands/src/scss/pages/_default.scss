@@ -1,0 +1,49 @@
+.entry-title{
+    a{
+        text-decoration: none;
+    }
+}
+
+.entry-meta{
+    margin-block-end: 20px;
+    font-size: 14px;
+    time{
+        margin: 0 5px;
+    }
+}
+
+.entry-footer{
+    font-size: 14px;
+    span{
+        margin: 0 5px;
+    }
+}
+
+.archive,
+.category,
+.search-results{
+    .site-main{
+        article{
+            padding-block-start: 30px;
+        }
+        article:not(:last-of-type){
+            padding-block-end: 30px;
+            border-bottom: 1px solid $color__primary;
+        }
+    }
+}
+
+.post-navigation,
+#comments{
+    margin-block-start: 40px;
+}
+
+.error404{
+    input[type="search"]{
+        padding-block: 12px !important;
+        height: auto !important;
+        @include breakpoint(smaller){
+            margin-block-end: 5px;
+        }
+    }
+}

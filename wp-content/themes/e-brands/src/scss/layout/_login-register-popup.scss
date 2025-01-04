@@ -1,0 +1,38 @@
+#modal-register{
+    .modal-content{
+        width: 1440px;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        .two-col-layout{
+            gap: 40px 0;
+            align-items: inherit;
+            .col{
+                padding-block: 112px;
+                padding-inline: 64px;
+                flex: 0 0 50%;
+                max-width: 50%;
+                @include breakpoint(laptop){
+                    padding-block: 64px;
+                    padding-inline: 32px;
+                }
+                @include breakpoint(wide){
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                @include breakpoint(medium){
+                    padding-block: 40px;
+                    padding-inline: 15px;
+                }
+                &:last-child{
+                    background: $color__gray_bg_dark;
+                    .btn-wrap{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

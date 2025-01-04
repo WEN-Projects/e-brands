@@ -1,0 +1,52 @@
+.cta {
+    position: relative;
+    color: $color__white;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+        color: $color__white;
+    }
+    .container {
+        position: relative;
+    }
+    form {
+        @include flex(false, center, wrap, row);
+        gap: 0 16px;
+        padding: 0 !important;
+        padding-block-start: 7px !important;
+        input:not([type="submit"] ) {
+            padding: 15px 12px !important;
+            font-size: 16px;
+            width: 400px !important;
+            max-width: 100%;
+        }
+        input[type="submit"] {
+            padding: 15px 26px !important;
+            font-size: 16px;
+        }
+        li.parsley-required {
+            color: $color__white;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+        .mailpoet-short-info{
+            font-size: 12px;
+            flex: 0 0 100%;
+            margin-bottom: 0;
+        }
+        .mailpoet_paragraph {
+            margin-bottom: 15px !important;
+            @include breakpoint(smaller){
+                width: 100%;
+            }
+        }
+    }
+}

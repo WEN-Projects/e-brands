@@ -1,0 +1,38 @@
+{
+	"name": "wp-scripts-boilerplate",
+	"version": "1.0.0",
+	"description": "This is a boilerplate for WordPress to compile JS and SCSS files for Theme development.",
+	"author": "WEN",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"wp-scripts",
+		"@wordpress/scripts",
+		"js",
+		"scss",
+		"wordpress theme"
+	],
+	"files": [
+		"src",
+		"package-lock.json",
+		"package.json"
+	],
+	"engines": {
+		"node": ">=14.0.0",
+		"npm": ">=6.14.4"
+	},
+	"dependencies": {
+		"swiper": "^11.0.5"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^27.1.0"
+	},
+	"scripts": {
+		"build": "wp-scripts build --output-path=build/dist",
+		"format": "wp-scripts format",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --output-path=build/dev"
+	}
+}

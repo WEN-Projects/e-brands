@@ -1,0 +1,17 @@
+{
+  "name": "newsletter-subscription",
+  "title": "Newsletter Subscription",
+  "description": "Newsletter Subscription",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Newsletter Subscription"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "newsletter-subscription.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

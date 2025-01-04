@@ -1,0 +1,17 @@
+{
+  "name": "test-product-image-content",
+  "title": "Test Product Image-Contetnt Block",
+  "description": "Test Product Image-Contetnt Block",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Test Product Image-Contetnt Block"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "test-product-image-content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

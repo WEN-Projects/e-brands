@@ -1,0 +1,17 @@
+{
+  "name": "info-content-with-image",
+  "title": "Info Content With Image",
+  "description": "Block With Image and Content",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Image Content Block"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "info-content-with-image.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

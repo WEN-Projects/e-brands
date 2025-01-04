@@ -1,0 +1,17 @@
+{
+  "name": "product-showcase-block",
+  "title": "Product Showcase",
+  "description": "Product Showcase",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Product Showcase"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "product-showcase-block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

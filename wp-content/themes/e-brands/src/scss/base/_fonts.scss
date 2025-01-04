@@ -1,0 +1,18 @@
+/**
+* Mixin to declare Font-face
+*
+* usage example
+* @include font-face('font-name', 'font-path', (font-extension), font-weight);
+* @include font-face('Roboto', '../fonts/roboto-bold', (woff2,woff,otf), 700);
+*
+*/
+
+
+@include font-face('Advent', '../fonts/AdventPro-Thin', (woff2, woff), 100);
+@include font-face('Advent', '../fonts/AdventPro-ExtraLight', (woff2, woff), 200);
+@include font-face('Advent', '../fonts/AdventPro-Light', (woff2, woff), 300);
+@include font-face('Advent', '../fonts/AdventPro-Regular', (woff2, woff), 400);
+@include font-face('Advent', '../fonts/AdventPro-Medium', (woff2, woff), 500);
+@include font-face('Advent', '../fonts/AdventPro-SemiBold', (woff2, woff), 600);
+@include font-face('Advent', '../fonts/AdventPro-Bold', (woff2, woff), 700);
+@include font-face('Advent', '../fonts/AdventPro-ExtraBold', (woff2, woff), 800);

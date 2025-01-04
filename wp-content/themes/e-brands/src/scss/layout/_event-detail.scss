@@ -1,0 +1,123 @@
+.single-tribe_events {
+    #tribe-events-pg-template {
+        max-width: 1342px;
+        padding-inline: 15px;
+        @include breakpoint(smaller) {
+            padding-inline: 20px;
+        }
+        .container {
+            padding-inline: 0;
+        }
+    }
+}
+
+.title-only{
+    .container{
+        .tribe-events-single-event-title + p:last-of-type{
+            margin-block-end: 0;
+        }
+        .meta-tag-list{
+            margin-block-start: 21px;
+        }
+    }
+}
+
+.event-info {
+    ul {
+        margin: 0 0 82px;
+        padding: 0;
+        @include breakpoint(wide) {
+            margin: 0 0 40px;
+        }
+        li {
+            list-style-type: none;
+            @include flex(flex-start, center, wrap, row);
+            gap: 20px;
+            border-block-start: 1px solid $color__primary;
+            padding-block: 4.5px;
+            font-size: 16px;
+            &:last-child {
+                border-block-end: 1px solid $color__primary;
+            }
+            .subject-caption {
+                flex: 0 0 96px;
+                max-width: 96px;
+            }
+            .detail {
+                flex: 1;
+            }
+        }
+    }
+}
+
+.single-cta {
+    padding-block: 57px 200px;
+    @include breakpoint(wide) {
+        padding-block: 80px;
+    }
+    @include breakpoint(wide) {
+        //padding-block: 64px;
+    }
+}
+
+.tribe-events {
+    .tribe-events-calendar-month__calendar-event-datetime > * {
+        font-size: 14px;
+    }
+    .tribe-events-calendar-month__day-cell--selected {
+        .tribe-events-calendar-month__day-date-daynum {
+            color: $color__white !important;
+        }
+    }
+    .datepicker {
+        .month {
+            &.current {
+                color: $color__white !important;
+            }
+        }
+    }
+}
+
+.event-tickets .tribe-tickets__tickets-form,
+.entry .entry-content .event-tickets .tribe-tickets__tickets-form {
+    max-width: 100%;
+}
+
+//.event-tickets {
+//    .tribe-tickets__tickets-buy {
+//        &.tribe-common-c-btn {
+//            background-color: $color__alternet;
+//        }
+//    }
+//}
+
+.event-tickets {
+    .tribe-tickets__attendee__fields__footer_checkout-button.tribe-common-c-btn:disabled,
+    .tribe-tickets__tickets-buy.tribe-common-c-btn:disabled {
+        background-color: $color__alternet;
+        color: $color__secondary;
+    }
+}
+
+.tribe-common {
+    .tribe-tickets__tickets-item-quantity {
+        button {
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    section.tribe-tickets__commerce-checkout {
+        margin: 0 auto;
+        padding: 80px 0;
+        @include breakpoint(small) {
+            padding-inline: 20px;
+        }
+    }
+}
+
+#tribe-events-view-selector-content {
+    @include breakpoint(small) {
+        width: 120px;
+    }
+}

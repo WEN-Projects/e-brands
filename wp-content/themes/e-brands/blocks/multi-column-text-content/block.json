@@ -1,0 +1,17 @@
+{
+  "name": "multi-column-text-content",
+  "title": "Multi Column Text-Content Block",
+  "description": "Multi Column Text-Content Block",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Multi Column Text-Content Block"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "multi-column-text-content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

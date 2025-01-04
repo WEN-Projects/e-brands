@@ -1,0 +1,21 @@
+{
+  "name": "image-content-block",
+  "title": "Image Content Block",
+  "description": "Block With Image and Content",
+  "style": [
+    "file:./testimonial.css"
+  ],
+  "category": "formatting",
+  "icon": "admin-comments",
+  "keywords": [
+    "image",
+    "image content block"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonial.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

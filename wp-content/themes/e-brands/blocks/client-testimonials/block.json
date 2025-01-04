@@ -1,0 +1,17 @@
+{
+  "name": "client-testimonials",
+  "title": "Client Testimonials",
+  "description": "Client Testimonials",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Client Testimonials"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "client-testimonials.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

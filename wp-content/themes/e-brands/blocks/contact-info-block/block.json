@@ -1,0 +1,17 @@
+{
+  "name": "contact-info-block",
+  "title": "Contact Info Block",
+  "description": "Contact Info Block",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Contact Info Block"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "contact-info-block.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

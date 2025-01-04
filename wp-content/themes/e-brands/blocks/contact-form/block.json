@@ -1,0 +1,18 @@
+{
+  "name": "contact-form",
+  "title": "Contact",
+  "description": "Contact",
+  "style": [],
+  "category": "e-brands-blocks",
+  "icon": "admin-comments",
+  "keywords": [
+    "Contact"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "contact-form.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

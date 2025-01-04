@@ -1,0 +1,19 @@
+{
+  "name": "image-content-block",
+  "title": "Image Content Block",
+  "description": "Block With Image and Content",
+  "style": [],
+  "category": "e-brands-blocks",
+  "icon": "admin-comments",
+  "keywords": [
+    "image",
+    "image content block"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "image-content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

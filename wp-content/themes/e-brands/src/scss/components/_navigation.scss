@@ -1,0 +1,306 @@
+// Menu Toggle Button
+.menu-toggle {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	width: 25px;
+	height: 16px;
+	padding: 0;
+	position: relative;
+	z-index: 999;
+	@include breakpoint(medium, true) {
+		display: none;
+	}
+
+	span {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		border-radius: 3px;
+		background: $color__black;
+
+		&:nth-child(1) {
+			top: 0;
+			transition:
+				0.4s top,
+				0.4s transform;
+
+			.toggled & {
+				top: 50%;
+				transform: translate(0, -50%) rotate(45deg);
+			}
+		}
+
+		&:nth-child(2) {
+			top: 50%;
+			transform: translate(0, -50%);
+			transition: 0.4s opacity;
+
+			.toggled & {
+				opacity: 0;
+			}
+		}
+
+		&:nth-child(3) {
+			bottom: 0;
+			transition:
+				0.4s bottom,
+				0.4s transform;
+
+			.toggled & {
+				bottom: 50%;
+				transform: translate(0, 50%) rotate(-45deg);
+			}
+		}
+	}
+}
+
+/*Main Navigation*/
+.main-navigation {
+	@include flex(space-between, center, wrap);
+	@include breakpoint(medium, true){
+		//padding-left: 24px;
+	}
+	@include breakpoint(medium){
+		flex: inherit;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+}
+
+// Menu Wrapper
+.menu-menu-1-container,
+.menu-primary-menu-container {
+	@include breakpoint(medium) {
+		@include flex($align: center, $wrap: wrap);
+		background-color: $color__white;
+		height: 100%;
+		width: 100%;
+		padding: 40px 20px 20px;
+		pointer-events: none;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		transition:
+			0.4s left,
+			0.4s visibility;
+		visibility: hidden;
+		z-index: 99;
+		margin-top: 72px;
+		max-height: calc(100% - 72px);
+		overflow: auto;
+		.logged-in &{
+			padding-block-start: 40px;
+		}
+
+		.toggled & {
+			left: 0;
+			pointer-events: all;
+			visibility: visible;
+		}
+		.navbar-buttons{
+			display: block !important;
+		}
+	}
+	.navbar-buttons{
+		@include breakpoint(medium, true){
+			display: none !important;
+		}
+	}
+}
+
+// Main menu
+.menu {
+	@include flex(space-between, center, wrap);
+	gap: 34px;
+
+	li {
+		position: relative;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: $color__primary;
+			font-size: 16px;
+			@include breakpoint(medium){
+				font-size: 18px;
+			}
+		}
+		&.current-page-item,
+		&:hover{
+			> a{
+				color: $color__secondary;
+			}
+		}
+	}
+	> li {
+		&.has-custom-submenu {
+			> a {
+				position: relative;
+				display: inline-block;
+				&:before {
+					content: '';
+					position: absolute;
+					right: -24px;
+					top: calc(50% - 4px);
+					width: 13px;
+					height: 8px;
+					background: url("../images/nav-arrow.svg") no-repeat;
+					background-position: center;
+					transition: all 0.4s;
+				}
+				&:after {
+					content: "";
+					position: absolute;
+					height: 100%;
+					width: calc(100% + 30px);
+					top: 0;
+					left: 0;
+				}
+			}
+			&.active {
+				> a {
+					&:before {
+						transform: scale(-1);
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+		@include flex(flex-start);
+		width: 100%;
+
+		li {
+			width: 100%;
+
+			&.menu-item-has-children {
+				> a {
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+// Dropdown Arrow
+.dropdown-arrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: all 0.4s;
+	transform-origin: center;
+	display: none;
+
+	@include breakpoint(medium) {
+		display: inline-block;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 8px;
+		height: 8px;
+		border-right: 2px solid $color__black;
+		border-bottom: 2px solid $color__black;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	.open > & {
+		transform: scale(-1);
+	}
+}
+
+// Submenu
+.sub-menu {
+	background: $color__white;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 200px;
+	z-index: 99999;
+	@include fade(hide);
+
+	@include breakpoint(medium) {
+		box-shadow: none;
+		height: 0;
+		opacity: 1;
+		overflow: hidden;
+		position: static;
+		transition: none;
+		visibility: visible;
+		width: 100%;
+	}
+
+	li {
+		width: 100%;
+
+		&:not(:last-child) {
+			> a {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+				@include breakpoint(medium) {
+					border: none;
+					width: 100%;
+				}
+			}
+		}
+
+		&.current-menu-item,
+		&.current-page-item,
+		&:hover {
+			> a {
+				background: #dedede;
+				color: $color__black;
+
+				@include breakpoint(medium) {
+					background: transparent;
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	a {
+		padding: 5px 15px;
+	}
+
+	&.pos-left {
+		left: unset;
+		right: 0;
+	}
+
+	ul {
+		top: 0;
+		left: 100%;
+
+		&.pos-left {
+			left: unset;
+			right: 100%;
+		}
+	}
+
+	li:hover > & {
+		@include breakpoint(medium, true) {
+			@include fade(show);
+		}
+	}
+}
+
+
+body.menu-opened{
+	@include breakpoint(medium, true){
+		overflow: auto !important;
+	}
+}

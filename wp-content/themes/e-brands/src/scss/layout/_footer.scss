@@ -1,0 +1,140 @@
+.site-footer {
+    padding-block: 80px;
+    font-size: 14px;
+    @include breakpoint(small){
+        padding-block: 34px;
+    }
+    &__top {
+        @include flex(space-between, flex-start, wrap);
+        padding-block-end: 80px;
+        @include breakpoint(small){
+            flex-direction: column;
+            gap: 46px;
+            padding-block-end: 35px;
+        }
+    }
+    a {
+        color: $color__primary;
+        &:hover {
+            opacity: 0.7;
+            text-decoration: none;
+        }
+    }
+    &__logo-col {
+        flex: 0 0 70%;
+        @include breakpoint(wide){
+            flex: 0 0 50%;
+        }
+        @include breakpoint(small){
+            flex: 0 0 100%;
+        }
+        .custom-logo-link {
+            margin-block-end: 29px;
+            display: inline-block;
+            max-width: 167px;
+            @include breakpoint(small){
+                margin-block-end: 22px;
+            }
+        }
+    }
+    &__info {
+        p {
+            margin-block-end: 24px;
+        }
+        .info {
+            &__title {
+                margin: 0 0 6px;
+                font-size: 14px;
+            }
+            &__content {
+                margin-block-end: 25px;
+            }
+        }
+    }
+    &__menu-wrapper {
+        flex: 0 0 30%;
+        padding-inline-start: 10px;
+        @include breakpoint(wide){
+            flex: 0 0 50%;
+        }
+        @include breakpoint(small){
+            padding-inline-start: 0;
+            flex: 0 0 100%;
+        }
+        &__inner {
+            gap: 32px;
+            @include flex(false, flex-start, wrap);
+            @include breakpoint(small){
+                flex-direction: column;
+                gap: 30px;
+            }
+            &__list {
+                margin: 0;
+                padding: 0;
+                flex: 0 0 calc(50% - 16px);
+                li {
+                    list-style-type: none;
+                    margin-block-end: 12px;
+                    .link-list__item {
+                        text-decoration: none;
+                        display: inline-block;
+                        font-weight: 600;
+                        font-size: 16px;
+                        @include breakpoint(small){
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding-block-start: 32px;
+        border-top: 1px solid $color__primary;
+        @include flex(space-between, center, wrap);
+        @include breakpoint(small){
+            padding-block-start: 26px;
+            flex-direction: column;
+            align-content: flex-start;
+            align-items: flex-start;
+            gap: 31px;
+        }
+        .site-footer__legal-list {
+            display: flex;
+            gap: 24px;
+            @include breakpoint(small){
+                gap: 16px;
+                flex-direction: column;
+                margin-block-end: 50px;
+            }
+        }
+    }
+    .social-list {
+        &__link {
+            color: $color__alternet;
+        }
+    }
+    &__credit-text{
+        @include breakpoint(small){
+            order: 2;
+        }
+    }
+}
+
+.social-list {
+    @include flex(false, flex-start, wrap);
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    &__item {
+        list-style-type: none;
+        width: 24px;
+        height: 24px;
+    }
+    &__link {
+        color: $color__alternet;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

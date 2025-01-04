@@ -1,0 +1,37 @@
+// --------- Success
+.text-success {
+	color: $color__success !important;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+	color: $color__success !important;
+}
+
+// --------- Warning
+.text-warning {
+	color: $color__warning !important;
+}
+
+a.text-warning:hover,
+a.text-warning:focus {
+	color: $color__warning !important;
+}
+
+// --------- Danger
+.text-danger {
+	color: $color__danger !important;
+}
+
+a.text-danger:hover,
+a.text-danger:focus {
+	color: $color__danger !important;
+}
+
+.text-decoration-none {
+	text-decoration: none;
+}
+
+.underline {
+	text-decoration: underline;
+}

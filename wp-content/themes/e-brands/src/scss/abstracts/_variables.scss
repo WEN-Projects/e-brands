@@ -1,0 +1,47 @@
+// --------------------------- Fonts
+$font__primary: 'Advent', sans-serif;
+$font__secondary: "sans-serif";
+$font__tertiary: "sans-serif";
+
+
+// --------------------------- Theme Colors
+$color__primary:  #000000;
+$color__secondary: #393939;
+$color__alternet: #FF9800;
+$color__text_alternet_light: #666666;
+$color__text_alternet: #393939;
+$color__hover: #393939;
+$color__gray_light: #f4f4f4;
+$color__gray_bg: #EEEEEE;
+$color__gray_bg_dark: #D9D9D9;
+$color__gray_main: #CCCCCC;
+
+
+$shadow__xxsmall: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+
+
+
+// --------------------------- Other Colors
+$color__success: #027A48;
+$color__warning: #ffc107;
+$color__danger: #B42318;
+$color__black: #000000;
+$color__white: #ffffff;
+
+// --------------------------- Breakpoints
+$breakpoints: (
+	"xxs": 320px,
+	"iPhone5": 374px,
+	"extraSmall": 479px,
+	"smaller": 575px,
+	"small": 767px,
+	"medium": 991px,
+	"ipadPro": 1024px,
+	"wide": 1199px,
+	"laptop": 1399px,
+	"extraWide": 1930px,
+);
+
+// --------------------------- Container
+$container-width: 1342px;
+$container-padding: 15px;

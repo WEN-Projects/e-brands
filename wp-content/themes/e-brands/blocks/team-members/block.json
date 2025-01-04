@@ -1,0 +1,17 @@
+{
+  "name": "team-members",
+  "title": "Team Members",
+  "description": "Team Members Block",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Team Members"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "team-members.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

@@ -1,0 +1,28 @@
+.faq-wrap{
+    .container{
+        width: 798px;
+        max-width: 100%;
+    }
+    &__title-row{
+        text-align: center;
+        p{
+            margin-block-end: 0;
+        }
+    }
+    .faq-cta {
+        text-align: center;
+        padding-block-start: 80px;
+        @include breakpoint(wide){
+            padding-block-start: 52px;
+        }
+        h4{
+            margin-block-end: 18px;
+            @include breakpoint(small){
+                margin-block-end: 15px;
+            }
+        }
+        .btn{
+            display: inline-block;
+        }
+    }
+}

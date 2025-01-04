@@ -1,0 +1,49 @@
+.product-showcase {
+    overflow: hidden;
+    &__slider{
+        overflow: visible;
+        .swiper-wrapper {
+            margin-block-end: 25px;
+            @include breakpoint(small){
+                margin-block-end: 30px;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: static;
+            margin-block-start: 0;
+        }
+    }
+    &__title-row {
+        @include flex(space-between, flex-end, wrap);
+        gap: 80px;
+        margin-block-end: 80px;
+        @include breakpoint(medium){
+            gap: 40px;
+            margin-block-end: 40px;
+        }
+        @include breakpoint(small){
+            align-items: flex-start;
+            flex-direction: column;
+            margin-block-end: 40px;
+        }
+    }
+    &__title-col {
+        flex: 1;
+        h2{
+            margin-bottom: 15px;
+        }
+        p{
+            margin-block-end: 0;
+        }
+    }
+    &__btn-col {
+        @include flex(false, false, wrap);
+        @include breakpoint(small){
+            width: 100%;
+        }
+    }
+    .product-card {
+        max-width: inherit;
+    }
+}

@@ -1,0 +1,153 @@
+.button,
+button,
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.link {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tribe-common .tribe-common-c-btn,
+.tribe-common a.tribe-common-c-btn,
+.tribe-common button.tribe-common-c-btn,
+input[type="submit"],
+.btn,
+.wp-element-button,
+button[type="button"]:not(.tribe-common button),
+.button {
+    padding: 12px 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color__primary;
+    background-color: $color__primary;
+    color: $color__white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 0;
+    font-weight: normal;
+    transition: background 0.4s, color 0.4s;
+    border-radius: 0;
+    @include breakpoint(iPhone5) {
+        margin-block-end: 5px;
+    }
+    &.is-secondary {
+        background-color: transparent;
+        color: $color__primary;
+        &.is-alternate {
+            border-color: $color__white;
+            background-color: transparent;
+            color: $color__white;
+        }
+        &.is-buy-now-button {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &.is-small {
+        padding: 9.5px 19px;
+    }
+    &.is-link {
+        padding: 4px 0;
+        border-style: none;
+        background-color: transparent;
+        color: $color__primary;
+        line-height: 1;
+        text-decoration: none;
+        &.is-alternate {
+            background-color: transparent;
+            color: $color__white;
+        }
+        &.is-icon {
+            gap: 8px;
+            svg {
+                transition: all 0.4s;
+            }
+            &:hover {
+                svg {
+                    transform: translate(5px);
+                }
+            }
+        }
+        @include breakpoint(iPhone5){
+            padding: 12px 0;
+        }
+    }
+    &.is-alternate {
+        background-color: $color__alternet;
+        color: $color__text_alternet;
+    }
+    &.is-icon {
+        @include flex(false, center);
+        gap: 12px;
+    }
+    &.is-add-to-cart-button {
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 1rem;
+    }
+    &.is-tertiary {
+        border-color: $color__gray_light;
+        background-color: $color__gray_light;
+        color: $color__primary;
+    }
+    &:not(.is-link):hover {
+        background-color: $color__hover !important;
+        color: $color__white !important;
+    }
+    &.menu-toggle:hover {
+        background: transparent !important;
+    }
+    &.full {
+        width: 100%;
+        display: block;
+    }
+    &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.btn-wrap {
+    gap: 15px;
+    @include flex(false, center, wrap);
+    input[type="submit"],
+    .btn,
+    .wp-element-button,
+    button[type="button"],
+    .button {
+        &:not(:last-child) {
+            //margin-inline-end: 14px;
+        }
+    }
+}
+
+.tribe-common {
+    .tribe-common-c-btn,
+    a.tribe-common-c-btn,
+    button.tribe-common-c-btn {
+        display: inline-block;
+        padding: 9px 18px !important;
+        border-radius: 0 !important;
+        font-size: 16px !important;
+        border: 1px solid $color__primary !important;
+    }
+}
+
+.tribe-events {
+    .datepicker {
+        .day.current {
+            color: $color__white;
+        }
+    }
+}
+
+.wpcf7 .wpcf7-submit:disabled{
+    @include breakpoint(wide) {
+        opacity: 0.7;
+    }
+}

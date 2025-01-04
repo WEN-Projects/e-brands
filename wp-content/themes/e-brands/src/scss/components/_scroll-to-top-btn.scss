@@ -1,0 +1,57 @@
+.to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 28px;
+    // display: none;
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    z-index: 19;
+    cursor: pointer;
+    background-color: $color__primary;
+    box-shadow: 0 0 13px -4px $color__black;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s opacity;
+
+    &.show{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    @include breakpoint (wide){
+        right: 15px;
+    }
+
+    &:hover {
+        @include breakpoint (medium, true){
+            background-color: $color__alternet;
+            transition: all 0.5s ease;
+        }
+
+    }
+
+
+    .wraps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transition: ease 0.4s;
+        height: 100%;
+
+        svg,
+        img {
+            height: 20px;
+
+            path {
+                fill: $color__white;
+            }
+        }
+    }
+
+    //wraps
+}

@@ -1,0 +1,93 @@
+// ------------------------------------- Site Base
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	word-break: break-word;
+	text-size-adjust: 100%;
+}
+
+img,
+video,
+svg,
+iframe,
+figure,
+picture {
+	max-width: 100%;
+	height: auto;
+}
+
+p{
+	margin-block-start: 0;
+}
+
+a{
+	transition: color 0.4s;
+	color: $color__primary;
+	&:hover{
+		color: $color__alternet;
+	}
+}
+
+h1, h2{
+	letter-spacing: 0.8px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+	margin-block-start: 0;
+	margin-block-end: 24px;
+	@include breakpoint(small){
+		margin-block-end: 21px;
+	}
+}
+
+.wp-block-group__inner-container,
+.container {
+	max-width: 100%;
+	width: $container-width;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+	@media screen and (max-width: 767px){
+		padding-inline: 20px;
+	}
+}
+
+
+.stretched-link{
+	&::after{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 3;
+		pointer-events: auto;
+		content: "";
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+.wc-block-components-notice-banner{
+	border-radius: 0;
+}

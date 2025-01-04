@@ -1,0 +1,156 @@
+.content-nav {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: $color__black;
+        @include breakpoint(medium) {
+            background: transparent;
+        }
+    }
+    .container {
+        @include breakpoint(medium) {
+            padding: 0;
+            display: block;
+        }
+    }
+    h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0 0 28px;
+    }
+    &__wrap {
+        width: 100%;
+        @include flex(space-between, stretch);
+        @include breakpoint(small) {
+            flex: 0 0 100%;
+            flex-direction: column;
+        }
+    }
+    &__link-list {
+        padding: 32px 32px 32px 0;
+        display: flex;
+        @include flex(false, false, wrap);
+        gap: 32px;
+        flex: 0 0 73%;
+        @include breakpoint(small) {
+            gap: 24px;
+        }
+        @include breakpoint(small) {
+            flex: 0 0 100%;
+            flex-direction: column;
+            align-content: flex-start;
+        }
+        &__list {
+            flex: 1;
+            @include breakpoint(small) {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+            h4 {
+
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 33px 0;
+                @include breakpoint(small){
+                    gap: 15px 0;
+                }
+                li {
+                    position: relative;
+                    list-style-type: none;
+                    @include flex(flase, flex-start, false);
+                    gap: 0 12px;
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                    .icon {
+                        flex: 0 0 24px;
+                        img {
+
+                        }
+                    }
+                    .detail {
+                        flex: 0 0 calc(100% - 36px);
+                        h5 {
+                            margin: 0;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        p {
+                            margin: 0;
+                            font-size: 16px;
+                            @include breakpoint(small){
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__card {
+        padding: 32px;
+        flex: 0 0 27%;
+        background: $color__gray_bg;
+        position: relative;
+        @include breakpoint(medium) {
+            padding: 24px;
+        }
+        @include breakpoint(small) {
+            flex: 0 0 100%;
+            flex-direction: column;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100vh;
+            top: 0;
+            left: calc(100% - 1px);
+            background: $color__gray_bg;
+        }
+        h4 {
+
+        }
+        &__inner {
+            max-width: 192px;
+            margin-block-end: 24px;
+            .figure {
+                display: block;
+                margin-block-end: 20px;
+                img {
+                    display: block;
+                }
+            }
+            h4 {
+                font-size: 16px;
+                margin-block-end: 7px;
+            }
+            p {
+                font-size: 14px;
+                margin-block-end: 3px;
+            }
+            .link {
+                color: $color__primary;
+                font-size: 16px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .btn {
+            display: inline-flex;
+        }
+    }
+}

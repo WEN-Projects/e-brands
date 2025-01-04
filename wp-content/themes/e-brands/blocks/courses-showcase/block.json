@@ -1,0 +1,17 @@
+{
+  "name": "courses-showcase",
+  "title": "Events Listing Module",
+  "description": "Events Listing Module",
+  "style": [],
+  "category": "e-brands-blocks",
+  "keywords": [
+    "Events Listing Module"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "courses-showcase.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
